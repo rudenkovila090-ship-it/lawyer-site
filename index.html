@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f3">
   <title>Диана — судебный юрист: поддержка и защита при клевете, травле, оскорблениях</title>
   <meta name="description" content="Судебный юрист Диана: защита при клевете, оскорблениях и травле, деловая репутация, права потребителей, арбитраж и суды общей юрисдикции. Поддержка и честная оценка шансов.">
   <!-- ЧЕРНОВИК: удалить строку ниже перед запуском сайта на домене (см. AGENTS.md, раздел «Запуск») -->
@@ -257,11 +258,11 @@
           <p class="kicker">Как это происходит</p>
           <h2>Путь от первого сообщения <em>до решения вопроса</em></h2>
         </div>
-        <ol class="steps">
-          <li class="reveal" style="--d:0s"><h3>Вы пишете мне</h3><p>Оставляете заявку на сайте или пишете в мессенджер, коротко и так, как получится. Вы сразу получаете номер заявки.</p></li>
-          <li class="reveal" style="--d:0.08s"><h3>Разговор и консультация</h3><p>Я выслушаю, разберу документы и честно оценю шансы. Без спешки и без давления.</p></li>
-          <li class="reveal" style="--d:0.16s"><h3>План и договор</h3><p>Предложу варианты действий, назову стоимость и сроки до начала работы. Решение всегда остаётся за вами.</p></li>
-          <li class="reveal" style="--d:0.24s"><h3>Работа по делу</h3><p>Веду дело и держу вас в курсе. Вам не нужно разбираться в процессуальных тонкостях: я объясню всё простыми словами.</p></li>
+        <ol class="steps reveal" style="--d:0s">
+          <li><span class="track"><span class="fill"></span></span><h3>Вы пишете мне</h3><p>Оставляете заявку на сайте или пишете в мессенджер, коротко и так, как получится. Вы сразу получаете номер заявки.</p></li>
+          <li><span class="track"><span class="fill"></span></span><h3>Разговор и консультация</h3><p>Я выслушаю, разберу документы и честно оценю шансы. Без спешки и без давления.</p></li>
+          <li><span class="track"><span class="fill"></span></span><h3>План и договор</h3><p>Предложу варианты действий, назову стоимость и сроки до начала работы. Решение всегда остаётся за вами.</p></li>
+          <li><h3>Работа по делу <span class="ready">Готово</span></h3><p>Веду дело и держу вас в курсе. Вам не нужно разбираться в процессуальных тонкостях: я объясню всё простыми словами.</p></li>
         </ol>
       </div>
     </section>
@@ -305,22 +306,22 @@
       <div class="wrap">
         <div class="cta-box reveal" style="--d:0s">
           <div>
-            <p class="kicker">Заявка на юридическую помощь</p>
+            <p class="kicker hide-sm">Заявка на юридическую помощь</p>
             <h2>У каждой ситуации <em>своя история</em></h2>
             <p>Поэтому начинаем с разговора. Расскажите, что случилось, как получится. Я отвечу и подскажу, что можно сделать. Свяжусь с вами в течение <mark class="ph">[СРОК ОТВЕТА]</mark>.</p>
-            <p>Каждой заявке присваивается номер, по которому я быстро найду ваше обращение. Или напишите сами: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a> · <a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a></p>
+            <p class="hide-sm">Каждой заявке присваивается номер, по которому я быстро найду ваше обращение. Или напишите сами: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a> · <a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a></p>
           </div>
           <form class="lead-form" id="lead-form" method="post" action="/api/lead" novalidate>
-            <label><span>ФИО <span class="opt">(обязательно)</span></span><input type="text" name="fio" required autocomplete="name"></label>
-            <label><span>Телефон <span class="opt">(обязательно)</span></span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
-            <label><span>Электронная почта <span class="opt">(по желанию)</span></span><input type="email" name="email" autocomplete="email"></label>
-            <label><span>Ник в Telegram <span class="opt">(по желанию)</span></span><input type="text" name="telegram" autocomplete="off" placeholder="@nickname"></label>
-            <label><span>По какому вопросу обращаетесь <span class="opt">(обязательно)</span></span><textarea name="message" rows="5" required></textarea></label>
+            <label class="wide-sm"><span>ФИО <span class="opt">(обязательно)</span></span><input type="text" name="fio" required autocomplete="name"></label>
+            <label class="wide-sm"><span>Телефон <span class="opt">(обязательно)</span></span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
+            <label class="half"><span>Email <span class="opt">(по желанию)</span></span><input type="email" name="email" autocomplete="email"></label>
+            <label class="half"><span>Telegram <span class="opt">(по желанию)</span></span><input type="text" name="telegram" autocomplete="off" placeholder="@ник"></label>
+            <label class="full"><span>Ваш вопрос <span class="opt">(обязательно)</span></span><textarea name="message" rows="2" required></textarea></label>
             <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="#consent">согласие на обработку персональных данных</a> и ознакомлен(а) с <a href="#policy">политикой обработки</a>.</span></label>
-            <button class="btn btn-block" type="submit">Отправить заявку</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-            <noscript><p>Для отправки формы нужен JavaScript. Напишите или позвоните: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a></p></noscript>
+            <label class="consent full"><input type="checkbox" name="consent" required><span>Даю <a href="https://example.com/consent">согласие на обработку персональных данных</a> и ознакомлен(а) с <a href="https://example.com/policy">политикой обработки</a>.</span></label>
+            <button class="btn btn-block full" type="submit">Отправить заявку</button>
+            <p class="form-status full" role="status" aria-live="polite"></p>
+            <noscript><p class="full">Для отправки формы нужен JavaScript. Напишите или позвоните: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a></p></noscript>
             <div class="success" role="status">
               <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="46"/><path class="tick" d="M30 52l14 14 27-30"/></svg>
               <h3>Заявка принята в работу</h3>
@@ -350,8 +351,18 @@
             <li><mark class="ph">[ДНИ И ЧАСЫ ПРИЁМА]</mark></li>
           </ul>
         </div>
+        <div id="legal">
+          <h3>Юридическая информация</h3>
+          <ul>
+            <li>Диана <mark class="ph">[ФАМИЛИЯ]</mark></li>
+            <li><mark class="ph">[СТАТУС: адвокат / юрист / ИП / самозанятая]</mark></li>
+            <li>ИНН <mark class="ph">[ИНН]</mark> · <mark class="ph">[ОГРНИП / РЕГ. НОМЕР]</mark></li>
+            <li><a href="https://example.com/policy">Политика обработки персональных данных</a></li>
+            <li><a href="https://example.com/consent">Согласие на обработку персональных данных</a></li>
+          </ul>
+        </div>
         <div>
-          <h3>Я в соцсетях</h3>
+          <h3>Мои социальные сети</h3>
           <ul>
             <li><a href="https://t.me/USERNAME">Telegram</a></li>
             <li><a href="https://instagram.com/USERNAME">Instagram</a></li>
@@ -361,20 +372,10 @@
         </div>
       </div>
 
-      <div class="legal" id="legal">
-        <h3>Юридическая информация</h3>
-        <p>Диана <mark class="ph">[ФАМИЛИЯ]</mark> · <mark class="ph">[СТАТУС: адвокат / юрист / ИП / самозанятая]</mark> · ИНН <mark class="ph">[ИНН]</mark> · <mark class="ph">[ОГРНИП / РЕГ. НОМЕР]</mark> · <mark class="ph">[АДРЕС]</mark></p>
-        <details id="policy">
-          <summary>Политика обработки персональных данных</summary>
-          <p><mark class="ph">[ВСТАВИТЬ ГОТОВЫЙ ТЕКСТ ПОЛИТИКИ ОТ ВЛАДЕЛИЦЫ САЙТА — не сочинять и не править самостоятельно]</mark></p>
-        </details>
-        <details id="consent">
-          <summary>Согласие на обработку персональных данных</summary>
-          <p><mark class="ph">[ВСТАВИТЬ ГОТОВЫЙ ТЕКСТ СОГЛАСИЯ ОТ ВЛАДЕЛИЦЫ САЙТА — не сочинять и не править самостоятельно]</mark></p>
-        </details>
-        <p>© 2026 Диана <mark class="ph">[ФАМИЛИЯ]</mark>. Материалы сайта носят информационный характер и не заменяют индивидуальную консультацию. Результат по делу зависит от обстоятельств и не гарантируется.</p>
-      </div>
+      <p class="copy">© 2026 Диана <mark class="ph">[ФАМИЛИЯ]</mark>. Материалы сайта носят информационный характер и не заменяют индивидуальную консультацию. Результат по делу зависит от обстоятельств и не гарантируется.</p>
     </div>
   </footer>
+
+  <a class="sticky-cta" href="#consult">Оставить заявку</a>
 </body>
 </html>

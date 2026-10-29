@@ -14,13 +14,48 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Ссылки на документы в подвале раскрывают нужный блок
-  document.querySelectorAll('a[href="#policy"], a[href="#consent"]').forEach(function (a) {
-    a.addEventListener('click', function () {
-      var d = document.getElementById(a.getAttribute('href').slice(1));
-      if (d) { d.open = true; }
+  // Путь клиента: шаги загораются по очереди, раз в 5 секунд; последний горит ярче
+  var stepList = document.querySelector('.steps');
+  if (stepList) {
+    var steps = stepList.querySelectorAll('li');
+    var STEP_MS = 5000;
+    var light = function (i) {
+      steps[i].classList.add('lit');
+      steps[i].classList.add(i < steps.length - 1 ? 'run' : 'final');
+    };
+    var play = function () {
+      if (reduce) { steps.forEach(function (li, i) { light(i); }); return; }
+      var i = 0;
+      light(0);
+      var timer = setInterval(function () {
+        i += 1;
+        light(i);
+        if (i >= steps.length - 1) { clearInterval(timer); }
+      }, STEP_MS);
+    };
+    if ('IntersectionObserver' in window) {
+      var stepsIo = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { stepsIo.disconnect(); play(); }
+      }, { threshold: 0.4 });
+      stepsIo.observe(stepList);
+    } else {
+      play();
+    }
+  }
+
+  // Кнопка записи, закреплённая внизу на телефоне: прячется у формы и в подвале
+  var sticky = document.querySelector('.sticky-cta');
+  if (sticky && 'IntersectionObserver' in window) {
+    var blocked = 0;
+    var update = function () { sticky.classList.toggle('show', window.scrollY > 480 && blocked === 0); };
+    var stickyIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { blocked += e.isIntersecting ? 1 : -1; });
+      blocked = Math.max(0, blocked);
+      update();
     });
-  });
+    ['consult', 'contacts'].forEach(function (id) { var el = document.getElementById(id); if (el) { stickyIo.observe(el); } });
+    window.addEventListener('scroll', update, { passive: true });
+  }
 
   // Форма заявки: отправка в /api/lead (см. functions/api/lead.js), оттуда уведомление уходит в Telegram
   var form = document.getElementById('lead-form');
