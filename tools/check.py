@@ -15,7 +15,7 @@ pages = sorted(ROOT.rglob("*.html"))
 
 errors, reminders = [], []
 PLACEHOLDER = re.compile(r"\[[A-ZА-ЯЁ][^\]]*\]")
-LEFTOVERS = ("XXXXXXXXXX", "example.com", "t.me/USERNAME")
+LEFTOVERS = ("XXXXXXXXXX", "example.com", "/USERNAME", "/PROFILE")
 
 
 def block(html, tag):

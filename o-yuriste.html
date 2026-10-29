@@ -3,28 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Обо мне — юрист</title>
-  <meta name="description" content="Образование, опыт и принципы работы юриста.">
+  <title>Обо мне — Диана, судебный юрист</title>
+  <meta name="description" content="Образование, опыт и принципы работы судебного юриста.">
   <!-- ЧЕРНОВИК: удалить строку ниже перед запуском сайта на домене (см. AGENTS.md, раздел «Запуск») -->
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.className = "js";</script>
+  <script src="js/site.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">К содержимому</a>
 
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="index.html">
-        <span class="brand-name"><mark class="ph">[ИМЯ ФАМИЛИЯ]</mark></span>
-        <span class="brand-role">Юрист</span>
-      </a>
+      <a class="brand" href="index.html">Диана<span class="dot">.</span></a>
+      <a class="btn btn-sm header-cta" href="index.html#consult">Записаться</a>
       <nav class="nav" aria-label="Основное меню">
       <ul>
-        <li><a href="uslugi.html">Услуги</a></li>
+        <li><a href="uslugi.html">Ситуации</a></li>
         <li><a href="o-yuriste.html" aria-current="page">Обо мне</a></li>
+        <li><a href="ekspertiza.html">Экспертиза</a></li>
+        <li><a href="index.html#otzyvy">Отзывы</a></li>
         <li><a href="blog/index.html">Блог</a></li>
-        <li><a href="kontakty.html">Контакты</a></li>
       </ul>
       </nav>
     </div>
@@ -34,63 +35,101 @@
 
     <section class="page-head">
       <div class="wrap">
-        <h1>Обо мне</h1>
+        <p class="kicker">Обо мне</p>
+        <h1>Диана <mark class="ph">[ФАМИЛИЯ]</mark>, <em>судебный юрист</em></h1>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap split">
-        <div class="photo" role="img" aria-label="Место для фотографии юриста">Место для фото</div>
+        <div class="photo" role="img" aria-label="Место для фотографии Дианы">Место для фото</div>
         <div class="prose">
-          <p><mark class="ph">[РАССКАЗ О СЕБЕ: путь в профессии, специализация, чем отличается ваш подход]</mark></p>
+          <p><mark class="ph">[ПОЛНОЕ ОПИСАНИЕ С ПРОФИ.РУ — путь в профессии, чем занимаетесь, как работаете]</mark></p>
           <h2>Образование и опыт</h2>
           <ul>
             <li><mark class="ph">[ОБРАЗОВАНИЕ]</mark></li>
             <li><mark class="ph">[ОПЫТ РАБОТЫ]</mark></li>
             <li><mark class="ph">[ПОВЫШЕНИЕ КВАЛИФИКАЦИИ / ЧЛЕНСТВО В ПРОФЕССИОНАЛЬНЫХ СООБЩЕСТВАХ]</mark></li>
           </ul>
+          <ul class="chips">
+          <li><a href="https://t.me/USERNAME">Telegram</a></li>
+          <li><a href="https://instagram.com/USERNAME">Instagram</a></li>
+          <li><a href="https://vk.com/USERNAME">ВКонтакте</a></li>
+          <li><a href="https://profi.ru/profile/PROFILE">Профи.ру</a></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section soft">
       <div class="wrap">
-        <h2>Принципы работы</h2>
-        <div class="grid">
-          <article class="card"><h3>Честная оценка</h3><p>Говорю о реальных перспективах дела, не обещаю результат, которого не могу гарантировать.</p></article>
-          <article class="card"><h3>Понятный язык</h3><p>Объясняю юридические вопросы без жаргона, чтобы вы сами понимали, что происходит с вашим делом.</p></article>
-          <article class="card"><h3>Конфиденциальность</h3><p>Всё, что вы рассказываете, остаётся между нами.</p></article>
+        <div class="section-head">
+          <p class="kicker">Принципы</p>
+          <h2>Как я <em>работаю</em></h2>
+        </div>
+        <div class="usp">
+        <div class="reveal" style="--d:0.0s"><h3>Честность</h3><p>Скажу прямо, какие у дела шансы и риски. Не обещаю чудес и не вселяю ложных надежд.</p></div>
+        <div class="reveal" style="--d:0.06s"><h3>Без давления</h3><p>Вы сами решаете, как действовать. Я объясняю варианты, а не продаю то, что вам не нужно.</p></div>
+        <div class="reveal" style="--d:0.12s"><h3>Экологичный подход</h3><p>Предлагаю только те шаги, которые действительно нужны в вашей ситуации.</p></div>
+        <div class="reveal" style="--d:0.18s"><h3>Человечность</h3><p>Говорю простым языком, без юридического «канцелярита».</p></div>
+        <div class="reveal" style="--d:0.24s"><h3>Сопереживание</h3><p>Понимаю, что за каждым делом живая история и сильные эмоции.</p></div>
+        <div class="reveal" style="--d:0.3s"><h3>Поддержка</h3><p>Остаюсь на связи на всём пути: от первой консультации до результата.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="wrap cta-inner">
+
+    <section class="cta-slim">
+      <div class="wrap">
         <div>
-          <h2>Нужна консультация?</h2>
-          <p>Опишите ситуацию в двух-трёх предложениях — скажу, чем могу помочь и что понадобится для начала работы.</p>
+          <h2>У каждой ситуации своя история</h2>
+          <p>Расскажите, что случилось — вместе решим, что с этим делать.</p>
         </div>
-        <a class="btn" href="kontakty.html#consult">Записаться на консультацию</a>
+        <a class="btn" href="index.html#consult">Записаться на консультацию</a>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="wrap foot">
-      <div>
-        <strong><mark class="ph">[ИМЯ ФАМИЛИЯ]</mark></strong><br>
-        Юрист · <mark class="ph">[ГОРОД]</mark>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <p><strong>Диана <mark class="ph">[ФАМИЛИЯ]</mark></strong><br>Судебный юрист · <mark class="ph">[ГОРОД]</mark></p>
+          <p>Защищаю людей и бизнес — честно, без давления и по-человечески.</p>
+        </div>
+        <div>
+          <h3>Разделы</h3>
+          <ul>
+          <li><a href="uslugi.html">Ситуации</a></li>
+          <li><a href="o-yuriste.html">Обо мне</a></li>
+          <li><a href="ekspertiza.html">Экспертиза</a></li>
+          <li><a href="index.html#otzyvy">Отзывы</a></li>
+          <li><a href="blog/index.html">Блог</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a></li>
+            <li><a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a></li>
+            <li><mark class="ph">[АДРЕС ПРИЁМА]</mark></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Я в сети</h3>
+          <ul>
+          <li><a href="https://t.me/USERNAME">Telegram</a></li>
+          <li><a href="https://instagram.com/USERNAME">Instagram</a></li>
+          <li><a href="https://vk.com/USERNAME">ВКонтакте</a></li>
+          <li><a href="https://profi.ru/profile/PROFILE">Профи.ру</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a><br>
-        <a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a><br>
-        <a href="https://t.me/USERNAME"><mark class="ph">[TELEGRAM]</mark></a>
+      <div class="legal">
+        <p>Диана <mark class="ph">[ФАМИЛИЯ]</mark> · <mark class="ph">[СТАТУС: адвокат / юрист / ИП / самозанятая]</mark> · ИНН <mark class="ph">[ИНН]</mark> · <mark class="ph">[ОГРНИП / РЕГ. НОМЕР]</mark></p>
+        <p><a href="privacy.html">Политика обработки персональных данных</a></p>
+        <p>© 2026 Диана <mark class="ph">[ФАМИЛИЯ]</mark>. Материалы сайта носят информационный характер и не заменяют индивидуальную консультацию. Результат по делу зависит от обстоятельств и не гарантируется.</p>
       </div>
-      <div class="legal"><mark class="ph">[РЕКВИЗИТЫ / СТАТУС ЮРИСТА]</mark></div>
-    </div>
-    <div class="wrap copy">
-      © 2026 <mark class="ph">[ИМЯ ФАМИЛИЯ]</mark>. Материалы сайта носят информационный характер и не заменяют индивидуальную консультацию.
     </div>
   </footer>
 </body>

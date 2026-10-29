@@ -3,28 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Юрист · главная</title>
-  <meta name="description" content="Сайт юриста: услуги, обо мне, блог и контакты.">
+  <title>Диана — судебный юрист</title>
+  <meta name="description" content="Судебный юрист: защита от травли и клеветы, деловая репутация, права потребителей, арбитраж. Запись на консультацию.">
   <!-- ЧЕРНОВИК: удалить строку ниже перед запуском сайта на домене (см. AGENTS.md, раздел «Запуск») -->
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.className = "js";</script>
+  <script src="js/site.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">К содержимому</a>
 
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="index.html">
-        <span class="brand-name"><mark class="ph">[ИМЯ ФАМИЛИЯ]</mark></span>
-        <span class="brand-role">Юрист</span>
-      </a>
+      <a class="brand" href="index.html">Диана<span class="dot">.</span></a>
+      <a class="btn btn-sm header-cta" href="index.html#consult">Записаться</a>
       <nav class="nav" aria-label="Основное меню">
       <ul>
-        <li><a href="uslugi.html">Услуги</a></li>
+        <li><a href="uslugi.html">Ситуации</a></li>
         <li><a href="o-yuriste.html">Обо мне</a></li>
+        <li><a href="ekspertiza.html">Экспертиза</a></li>
+        <li><a href="index.html#otzyvy">Отзывы</a></li>
         <li><a href="blog/index.html">Блог</a></li>
-        <li><a href="kontakty.html">Контакты</a></li>
       </ul>
       </nav>
     </div>
@@ -32,116 +33,339 @@
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Юрист · <mark class="ph">[ГОРОД]</mark> и онлайн</p>
-        <h1>Защищаю ваши интересы в вопросах: <mark class="ph">[СПЕЦИАЛИЗАЦИЯ]</mark></h1>
-        <p class="lead">Консультирую, готовлю документы и представляю интересы клиентов. Говорю понятным языком и честно оцениваю перспективы дела.</p>
-        <div class="hero-actions">
-          <a class="btn" href="kontakty.html#consult">Записаться на консультацию</a>
-          <a class="btn btn-ghost" href="uslugi.html">Услуги</a>
+    <div class="hero-wrap">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="wrap hero">
+        <div>
+          <p class="eyebrow">Судебный юрист · <mark class="ph">[ГОРОД]</mark></p>
+          <h1>Привет, я <em>Диана</em>.</h1>
+          <p class="lead">Защищаю людей и бизнес, когда задета репутация, нарушены права или дело дошло до суда. Без давления и сложных слов — по-человечески и честно о шансах.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#consult">Записаться на консультацию</a>
+            <a class="btn btn-ghost" href="o-yuriste.html">Обо мне</a>
+          </div>
         </div>
-        <dl class="facts">
-          <div><dt><mark class="ph">[N]</mark> лет</dt><dd>юридической практики</dd></div>
-          <div><dt><mark class="ph">[N]</mark></dt><dd>клиентов, которым помогла</dd></div>
-          <div><dt><mark class="ph">[ФОРМАТ]</mark></dt><dd>личная встреча и онлайн</dd></div>
-        </dl>
+        <div class="portrait">
+          <div class="portrait-circle" role="img" aria-label="Место для фотографии Дианы">
+            <span><span class="portrait-initial">Д</span>Место для фото</span>
+          </div>
+          <div class="portrait-card">
+            <p><mark class="ph">[СТАТУС ЗАПИСИ, например: есть окна на этой неделе]</mark></p>
+            <a class="more" href="#otzyvy">Читать отзывы →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div class="wrap strip-inner">
+        <span class="strip-label">Мои материалы и комментарии:</span>
+        <span class="strip-items">
+          <span><mark class="ph">[СМИ 1]</mark></span><span><mark class="ph">[СМИ 2]</mark></span><span><mark class="ph">[ПОДКАСТ / ЖУРНАЛ]</mark></span><span><mark class="ph">[УНИВЕРСИТЕТ / КОНФЕРЕНЦИЯ]</mark></span>
+        </span>
+      </div>
+    </div>
+
+    <section class="section" id="situatsii">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">С чем приходят</p>
+          <h2>Ситуации, в которых <em>я помогаю</em></h2>
+          <p class="section-lead">Если вы узнали свою ситуацию — вы по адресу. Если нет, всё равно напишите: разберёмся, смогу ли я помочь.</p>
+        </div>
+        <div class="grid wide">
+        <article class="card reveal" style="--d:0.0s">
+          <span class="pill">1</span>
+          <h3>Травля и клевета</h3>
+          <p>Когда о вас или вашем ребёнке распространяют ложь, унижают, травят — в школе, в чатах, в интернете. Разберём ситуацию, соберём доказательства и выберем путь: от досудебных шагов до суда.</p>
+          <a class="more" href="uslugi.html#travlya">Подробнее →</a>
+        </article>
+        <article class="card reveal" style="--d:0.08s">
+          <span class="pill">2</span>
+          <h3>Деловая репутация</h3>
+          <p>Ложные отзывы, публичные обвинения, недобросовестные публикации о компании или предпринимателе. Помогаю защитить имя и бизнес.</p>
+          <a class="more" href="uslugi.html#reputatsiya">Подробнее →</a>
+        </article>
+        <article class="card reveal" style="--d:0.16s">
+          <span class="pill">3</span>
+          <h3>Моральный вред и компенсации</h3>
+          <p>Когда нарушены ваши права и это сказалось на здоровье, спокойствии, жизни. Помогаю добиваться справедливой компенсации.</p>
+          <a class="more" href="uslugi.html#moralnyj-vred">Подробнее →</a>
+        </article>
+        <article class="card reveal" style="--d:0.24s">
+          <span class="pill">4</span>
+          <h3>Защита прав потребителей</h3>
+          <p>Некачественный ремонт, строительство, подряд, срыв сроков. Не молчите и не теряйте деньги: подскажу, как действовать.</p>
+          <a class="more" href="uslugi.html#potrebiteli">Подробнее →</a>
+        </article>
+        <article class="card reveal" style="--d:0.32s">
+          <span class="pill">5</span>
+          <h3>Арбитраж и суды общей юрисдикции</h3>
+          <p>Споры бизнеса и частные дела. Представляю интересы в арбитражном суде и судах общей юрисдикции.</p>
+          <a class="more" href="uslugi.html#arbitrazh">Подробнее →</a>
+        </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="uslugi">
+    <section class="section soft">
       <div class="wrap">
-        <h2>Услуги</h2>
-        <p class="section-lead">Основные направления работы.</p>
-        <div class="grid">
-        <article class="card">
-          <h3><mark class="ph">[НАПРАВЛЕНИЕ 1]</mark></h3>
-          <p><mark class="ph">[КОРОТКОЕ ОПИСАНИЕ: с чем помогаете и что получает клиент]</mark></p>
-          <a class="more" href="uslugi.html#napravlenie-1">Подробнее →</a>
-        </article>
-        <article class="card">
-          <h3><mark class="ph">[НАПРАВЛЕНИЕ 2]</mark></h3>
-          <p><mark class="ph">[КОРОТКОЕ ОПИСАНИЕ: с чем помогаете и что получает клиент]</mark></p>
-          <a class="more" href="uslugi.html#napravlenie-2">Подробнее →</a>
-        </article>
-        <article class="card">
-          <h3><mark class="ph">[НАПРАВЛЕНИЕ 3]</mark></h3>
-          <p><mark class="ph">[КОРОТКОЕ ОПИСАНИЕ: с чем помогаете и что получает клиент]</mark></p>
-          <a class="more" href="uslugi.html#napravlenie-3">Подробнее →</a>
-        </article>
-        <article class="card">
-          <h3><mark class="ph">[НАПРАВЛЕНИЕ 4]</mark></h3>
-          <p><mark class="ph">[КОРОТКОЕ ОПИСАНИЕ: с чем помогаете и что получает клиент]</mark></p>
-          <a class="more" href="uslugi.html#napravlenie-4">Подробнее →</a>
-        </article>
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Результаты</p>
+          <h2>За цифрами стоят <em>живые люди</em></h2>
+          <p class="section-lead">Что удалось сделать для тех, кто пришёл за помощью.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <h2>Как проходит работа</h2>
-        <ol class="steps">
-          <li><h3>Консультация</h3><p>Разбираем ситуацию, изучаем документы, определяем цель.</p></li>
-          <li><h3>Позиция и план</h3><p>Оцениваю перспективы и предлагаю стратегию с понятными этапами.</p></li>
-          <li><h3>Договор</h3><p>Фиксируем объём работы, сроки и стоимость до начала.</p></li>
-          <li><h3>Работа по делу</h3><p>Готовлю документы, веду переговоры, представляю интересы. Держу вас в курсе.</p></li>
-        </ol>
+        <div class="stats">
+          <div class="stat reveal" style="--d:0s"><span class="num"><mark class="ph">[СУММА]</mark> ₽</span><span class="cap">возвращено и взыскано в пользу клиентов</span></div>
+          <div class="stat reveal" style="--d:0.08s"><span class="num"><mark class="ph">[N]</mark></span><span class="cap">выигранных дел</span></div>
+          <div class="stat reveal" style="--d:0.16s"><span class="num"><mark class="ph">[N]</mark></span><span class="cap">историй, где удалось остановить травлю</span></div>
+        </div>
+        <div class="story reveal" style="--d:0s">
+          <h3><mark class="ph">[ИСТОРИЯ ДЕЛА: коротко, без раскрытия имён]</mark></h3>
+          <p><mark class="ph">[С чем пришёл человек → что сделали → что изменилось в его жизни. Только то, что можно публиковать, с согласия клиента]</mark></p>
+        </div>
+        <p class="fineprint">Результат зависит от обстоятельств конкретного дела. Прошлые результаты не гарантируют будущих.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap split">
-        <div class="photo" role="img" aria-label="Место для фотографии юриста">Место для фото</div>
-        <div>
-          <h2>Обо мне</h2>
-          <p><mark class="ph">[2–3 ПРЕДЛОЖЕНИЯ О СЕБЕ: образование, опыт, специализация, подход к работе]</mark></p>
-          <a class="more" href="o-yuriste.html">Подробнее обо мне →</a>
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Почему со мной спокойно</p>
+          <h2>Помогаю так, как <em>хотела бы, чтобы помогали мне</em></h2>
+        </div>
+        <div class="usp">
+        <div class="reveal" style="--d:0.0s"><h3>Честность</h3><p>Скажу прямо, какие у дела шансы и риски. Не обещаю чудес и не вселяю ложных надежд.</p></div>
+        <div class="reveal" style="--d:0.06s"><h3>Без давления</h3><p>Вы сами решаете, как действовать. Я объясняю варианты, а не продаю то, что вам не нужно.</p></div>
+        <div class="reveal" style="--d:0.12s"><h3>Экологичный подход</h3><p>Предлагаю только те шаги, которые действительно нужны в вашей ситуации.</p></div>
+        <div class="reveal" style="--d:0.18s"><h3>Человечность</h3><p>Говорю простым языком, без юридического «канцелярита».</p></div>
+        <div class="reveal" style="--d:0.24s"><h3>Сопереживание</h3><p>Понимаю, что за каждым делом живая история и сильные эмоции.</p></div>
+        <div class="reveal" style="--d:0.3s"><h3>Поддержка</h3><p>Остаюсь на связи на всём пути: от первой консультации до результата.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section soft">
+      <div class="wrap split">
+        <div class="photo reveal" style="--d:0s" role="img" aria-label="Место для фотографии Дианы">Место для фото</div>
+        <div class="reveal" style="--d:0.1s">
+          <p class="kicker">Обо мне</p>
+          <h2>Диана <mark class="ph">[ФАМИЛИЯ]</mark>, <em>судебный юрист</em></h2>
+          <p><mark class="ph">[ТЕКСТ «О СЕБЕ» — взять описание из профиля на Профи.ру, 3–5 предложений]</mark></p>
+          <a class="more" href="o-yuriste.html">Читать полностью →</a>
+          <ul class="chips">
+          <li><a href="https://t.me/USERNAME">Telegram</a></li>
+          <li><a href="https://instagram.com/USERNAME">Instagram</a></li>
+          <li><a href="https://vk.com/USERNAME">ВКонтакте</a></li>
+          <li><a href="https://profi.ru/profile/PROFILE">Профи.ру</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="wrap">
-        <h2>Из блога</h2>
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Экспертиза</p>
+          <h2>Не только практика, но и <em>наука</em></h2>
+          <p class="section-lead">Публикую научные статьи, выступаю на конференциях и комментирую сложные дела.</p>
+        </div>
+        <div class="cols">
+          <article class="card reveal" style="--d:0s">
+            <h3>Научные статьи</h3>
+            <p><mark class="ph">[ТЕМА ИЛИ НАЗВАНИЕ СТАТЬИ, ЖУРНАЛ, ГОД]</mark></p>
+            <a class="more" href="ekspertiza.html#nauka">Все статьи →</a>
+          </article>
+          <article class="card reveal" style="--d:0.08s">
+            <h3>Выступления</h3>
+            <p><mark class="ph">[КОНФЕРЕНЦИЯ / ЭФИР / ПОДКАСТ, ТЕМА, ГОД]</mark></p>
+            <a class="more" href="ekspertiza.html#vystupleniya">Все выступления →</a>
+          </article>
+          <article class="card reveal" style="--d:0.16s">
+            <h3>Комментарии в СМИ</h3>
+            <p><mark class="ph">[ИЗДАНИЕ, ТЕМА КОММЕНТАРИЯ, ГОД]</mark></p>
+            <a class="more" href="ekspertiza.html#smi">Все публикации →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="otzyvy">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Отзывы</p>
+          <h2>Что говорят <em>клиенты</em></h2>
+          <p class="section-lead">Отзывы с моего профиля на <a href="https://profi.ru/profile/PROFILE">Профи.ру</a>. Там можно прочитать их все.</p>
+        </div>
         <div class="grid">
-          <article class="card">
+          <article class="card review reveal" style="--d:0.0s">
+            <p class="meta"><mark class="ph">[ОЦЕНКА]</mark> · Профи.ру</p>
+            <blockquote><mark class="ph">[ТЕКСТ ОТЗЫВА С ПРОФИ.РУ — копировать дословно]</mark></blockquote>
+            <p class="who"><mark class="ph">[ИМЯ АВТОРА ОТЗЫВА]</mark><small><mark class="ph">[ДАТА · ТИП ДЕЛА]</mark></small></p>
+          </article>
+          <article class="card review reveal" style="--d:0.08s">
+            <p class="meta"><mark class="ph">[ОЦЕНКА]</mark> · Профи.ру</p>
+            <blockquote><mark class="ph">[ТЕКСТ ОТЗЫВА С ПРОФИ.РУ — копировать дословно]</mark></blockquote>
+            <p class="who"><mark class="ph">[ИМЯ АВТОРА ОТЗЫВА]</mark><small><mark class="ph">[ДАТА · ТИП ДЕЛА]</mark></small></p>
+          </article>
+          <article class="card review reveal" style="--d:0.16s">
+            <p class="meta"><mark class="ph">[ОЦЕНКА]</mark> · Профи.ру</p>
+            <blockquote><mark class="ph">[ТЕКСТ ОТЗЫВА С ПРОФИ.РУ — копировать дословно]</mark></blockquote>
+            <p class="who"><mark class="ph">[ИМЯ АВТОРА ОТЗЫВА]</mark><small><mark class="ph">[ДАТА · ТИП ДЕЛА]</mark></small></p>
+          </article>
+        </div>
+        <p style="margin-top: 24px"><a class="more" href="https://profi.ru/profile/PROFILE">Все отзывы на Профи.ру →</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Как это происходит</p>
+          <h2>Путь от первого сообщения <em>до результата</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal" style="--d:0s"><h3>Вы пишете мне</h3><p>Оставляете заявку или пишете в мессенджер. Коротко, как получится.</p></li>
+          <li class="reveal" style="--d:0.08s"><h3>Консультация</h3><p>Разбираем ситуацию, смотрим документы, честно оцениваю шансы.</p></li>
+          <li class="reveal" style="--d:0.16s"><h3>План и договор</h3><p>Предлагаю варианты действий, называю стоимость и сроки до начала работы.</p></li>
+          <li class="reveal" style="--d:0.24s"><h3>Работа по делу</h3><p>Веду дело и держу вас в курсе. Вам не нужно разбираться в процессуальных тонкостях.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Из соцсетей</p>
+          <h2>Больше обо мне — <em>в соцсетях</em></h2>
+          <p class="section-lead"><mark class="ph">[@ЛОГИН]</mark> — про суды, права и жизнь юриста.</p>
+        </div>
+        <div class="tiles" style="max-width: 640px">
+          <a class="tile reveal" style="--d:0.0s" href="https://instagram.com/USERNAME"><mark class="ph">[ПОСТ 1]</mark></a>
+          <a class="tile reveal" style="--d:0.05s" href="https://instagram.com/USERNAME"><mark class="ph">[ПОСТ 2]</mark></a>
+          <a class="tile reveal" style="--d:0.1s" href="https://instagram.com/USERNAME"><mark class="ph">[ПОСТ 3]</mark></a>
+          <a class="tile reveal" style="--d:0.15000000000000002s" href="https://instagram.com/USERNAME"><mark class="ph">[ПОСТ 4]</mark></a>
+          <a class="tile reveal" style="--d:0.2s" href="https://instagram.com/USERNAME"><mark class="ph">[ПОСТ 5]</mark></a>
+          <a class="tile reveal" style="--d:0.25s" href="https://instagram.com/USERNAME"><mark class="ph">[ПОСТ 6]</mark></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Из блога</p>
+          <h2>Полезно знать</h2>
+        </div>
+        <div class="grid">
+          <article class="card reveal" style="--d:0s">
             <p class="meta"><mark class="ph">[ДАТА]</mark></p>
             <h3><a href="blog/primer-stati.html"><mark class="ph">[ЗАГОЛОВОК СТАТЬИ]</mark></a></h3>
             <p><mark class="ph">[КОРОТКИЙ АНОНС СТАТЬИ]</mark></p>
           </article>
         </div>
-        <p><a class="more" href="blog/index.html">Все статьи →</a></p>
+        <p style="margin-top: 24px"><a class="more" href="blog/index.html">Все статьи →</a></p>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="wrap cta-inner">
-        <div>
-          <h2>Нужна консультация?</h2>
-          <p>Опишите ситуацию в двух-трёх предложениях — скажу, чем могу помочь и что понадобится для начала работы.</p>
+    <section class="section soft">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Частые вопросы</p>
+          <h2>Что обычно <em>спрашивают</em></h2>
         </div>
-        <a class="btn" href="kontakty.html#consult">Записаться на консультацию</a>
+        <div class="faq">
+        <details class="reveal" style="--d:0s">
+          <summary>Сколько стоит консультация?</summary>
+          <p>Первая консультация — <mark class="ph">[УСЛОВИЯ И СТОИМОСТЬ ПЕРВОЙ КОНСУЛЬТАЦИИ]</mark>. Стоимость дальнейшей работы называю до начала, фиксируем в договоре.</p>
+        </details>
+        <details class="reveal" style="--d:0s">
+          <summary>Можно ли записаться онлайн?</summary>
+          <p>Да. Провожу консультации <mark class="ph">[ФОРМАТ: онлайн / лично / оба варианта]</mark>.</p>
+        </details>
+        <details class="reveal" style="--d:0s">
+          <summary>Вы гарантируете результат?</summary>
+          <p>Честный юрист не может гарантировать исход дела. Я оцениваю шансы и риски заранее и рассказываю о них прямо.</p>
+        </details>
+        <details class="reveal" style="--d:0s">
+          <summary>Что взять с собой на консультацию?</summary>
+          <p>Документы по ситуации: договоры, переписку, скриншоты, справки. Если не уверены, что именно нужно, приходите с тем, что есть, — разберёмся.</p>
+        </details>
+        <details class="reveal" style="--d:0s">
+          <summary>Всё сказанное останется между нами?</summary>
+          <p>Да. Сведения, которые вы мне доверяете, конфиденциальны.</p>
+        </details>
+        </div>
       </div>
     </section>
+
+    <section class="section" id="consult">
+      <div class="wrap">
+        <div class="cta-box reveal" style="--d:0s">
+          <div>
+            <p class="kicker">Запись на консультацию</p>
+            <h2>У каждой ситуации <em>своя история</em></h2>
+            <p>Поэтому начинаем с разговора. Расскажите, что случилось, — я отвечу и подскажу, что можно сделать. Ответ в течение <mark class="ph">[СРОК ОТВЕТА]</mark>.</p>
+            <p>Или напишите сами: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a> · <a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a></p>
+          </div>
+          <form class="lead-form" id="lead-form" method="post" action="/api/lead">
+            <label>Как к вам обращаться<input type="text" name="name" required autocomplete="name"></label>
+            <label>Телефон или Telegram<input type="text" name="contact" required autocomplete="tel"></label>
+            <label>Коротко о ситуации (по желанию)<textarea name="message" rows="4"></textarea></label>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent"><input type="checkbox" name="consent" required><span>Даю согласие на обработку персональных данных. <a href="privacy.html">Политика обработки</a></span></label>
+            <button class="btn" type="submit">Отправить заявку</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <noscript><p>Для отправки формы нужен JavaScript. Напишите или позвоните: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a></p></noscript>
+          </form>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
   <footer class="site-footer">
-    <div class="wrap foot">
-      <div>
-        <strong><mark class="ph">[ИМЯ ФАМИЛИЯ]</mark></strong><br>
-        Юрист · <mark class="ph">[ГОРОД]</mark>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <p><strong>Диана <mark class="ph">[ФАМИЛИЯ]</mark></strong><br>Судебный юрист · <mark class="ph">[ГОРОД]</mark></p>
+          <p>Защищаю людей и бизнес — честно, без давления и по-человечески.</p>
+        </div>
+        <div>
+          <h3>Разделы</h3>
+          <ul>
+          <li><a href="uslugi.html">Ситуации</a></li>
+          <li><a href="o-yuriste.html">Обо мне</a></li>
+          <li><a href="ekspertiza.html">Экспертиза</a></li>
+          <li><a href="index.html#otzyvy">Отзывы</a></li>
+          <li><a href="blog/index.html">Блог</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a></li>
+            <li><a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a></li>
+            <li><mark class="ph">[АДРЕС ПРИЁМА]</mark></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Я в сети</h3>
+          <ul>
+          <li><a href="https://t.me/USERNAME">Telegram</a></li>
+          <li><a href="https://instagram.com/USERNAME">Instagram</a></li>
+          <li><a href="https://vk.com/USERNAME">ВКонтакте</a></li>
+          <li><a href="https://profi.ru/profile/PROFILE">Профи.ру</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a><br>
-        <a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a><br>
-        <a href="https://t.me/USERNAME"><mark class="ph">[TELEGRAM]</mark></a>
+      <div class="legal">
+        <p>Диана <mark class="ph">[ФАМИЛИЯ]</mark> · <mark class="ph">[СТАТУС: адвокат / юрист / ИП / самозанятая]</mark> · ИНН <mark class="ph">[ИНН]</mark> · <mark class="ph">[ОГРНИП / РЕГ. НОМЕР]</mark></p>
+        <p><a href="privacy.html">Политика обработки персональных данных</a></p>
+        <p>© 2026 Диана <mark class="ph">[ФАМИЛИЯ]</mark>. Материалы сайта носят информационный характер и не заменяют индивидуальную консультацию. Результат по делу зависит от обстоятельств и не гарантируется.</p>
       </div>
-      <div class="legal"><mark class="ph">[РЕКВИЗИТЫ / СТАТУС ЮРИСТА]</mark></div>
-    </div>
-    <div class="wrap copy">
-      © 2026 <mark class="ph">[ИМЯ ФАМИЛИЯ]</mark>. Материалы сайта носят информационный характер и не заменяют индивидуальную консультацию.
     </div>
   </footer>
 </body>
