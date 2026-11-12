@@ -16,12 +16,12 @@
   --radius: 18px;
   --shadow: none;
   --max: 1240px;
-  --serif: "Noto Serif Local", Georgia, serif;
-  --sans: "Noto Sans Local", Arial, sans-serif;
+  --serif: "Montserrat", Arial, sans-serif;
+  --sans: "Montserrat", Arial, sans-serif;
 }
-@font-face { font-family: "Noto Serif Local"; src: url("../fonts/NotoSerif-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Noto Sans Local"; src: url("../fonts/NotoSans-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 
+
+@font-face { font-family: "Montserrat"; src: url("../fonts/Montserrat-Variable.ttf") format("truetype"); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
@@ -440,3 +440,27 @@ h3 { font-size: 1.45rem; }
   .cta-box { row-gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .side-menu nav { transition: none; } }
+
+/* Общая строка шапки и сбалансированная композиция заявки. */
+button, input, textarea, select { font-family: var(--sans); }
+.cta-box { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; gap: 40px; }
+.consult-copy { min-width: 0; }
+.cta-box .consult-title { margin-bottom: 20px; font-size: .8rem; line-height: 1.5; }
+.consult-copy h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); line-height: 1.25; }
+.consult-copy > p:last-child { margin-bottom: 0; }
+@media (min-width: 1200px) {
+  .bar { flex-wrap: nowrap; gap: 12px; max-width: 1560px; }
+  .brand { flex: 0 0 auto; font-size: 1.6rem; }
+  .nav { order: 2; width: auto; min-width: 0; flex: 1; }
+  .nav ul { flex-wrap: nowrap; gap: 5px; justify-content: center; }
+  .nav a { white-space: nowrap; padding: 10px 8px; font-size: clamp(.59rem, .74vw, .75rem); letter-spacing: .025em; }
+  .header-cta { order: 3; flex: 0 0 auto; white-space: nowrap; padding: 12px 15px; font-size: .65rem; }
+}
+@media (max-width: 860px) {
+  .cta-box { grid-template-columns: 1fr; gap: 24px; }
+  .cta-box .consult-title { margin-bottom: 14px; }
+}
+@media (max-width: 600px) {
+  .cta-box { gap: 20px; }
+  .cta-box .consult-title { font-size: .72rem; }
+}
