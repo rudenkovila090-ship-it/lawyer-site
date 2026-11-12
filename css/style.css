@@ -477,3 +477,15 @@ button, input, textarea, select { font-family: var(--sans); }
 
 /* Общий масштаб: уменьшение всех элементов в 1,25 раза. */
 html { zoom: .8; }
+
+/* Текст занимает доступную ширину без искусственного балансирования строк. */
+h1, h2, h3, p, li, blockquote, summary, dd { text-wrap: wrap; hyphens: none; -webkit-hyphens: none; }
+.lead, .section-lead, .faq { max-width: none; }
+#materialy .section-head, #materialy .section-lead { width: 100%; }
+.posts-grid { grid-template-rows: repeat(5, auto); row-gap: 0; }
+.post-card { display: grid; grid-template-rows: subgrid; grid-row: span 5; min-width: 0; }
+.post-card > details { align-self: start; }
+@media (max-width: 860px) {
+  .posts-grid { grid-template-rows: none; row-gap: 36px; }
+  .post-card { display: block; grid-row: auto; }
+}
