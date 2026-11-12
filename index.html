@@ -23,14 +23,32 @@
       <nav class="nav" aria-label="Основное меню">
       <ul>
         <li><a href="#uslugi">Услуги</a></li>
+        <li><a href="#situatsii">С чем приходят</a></li>
+        <li><a href="#put">Как это происходит</a></li>
+        <li><a href="#rezultaty">Результат</a></li>
         <li><a href="#o-mne">Обо мне</a></li>
-        <li><a href="#materialy">Мини-посты</a></li>
+        <li><a href="#blog">Блог</a></li>
         <li><a href="#otzyvy">Отзывы</a></li>
-        <li><a href="#voprosy">Вопросы</a></li>
+        <li><a href="#voprosy">Частые вопросы</a></li>
       </ul>
       </nav>
     </div>
   </header>
+
+
+  <aside class="side-menu" aria-label="Навигация по странице">
+    <button class="side-menu-toggle" type="button" aria-expanded="false" aria-controls="side-menu-links"><span aria-hidden="true">☰</span><span>Разделы</span></button>
+    <nav id="side-menu-links" aria-label="Разделы сайта" inert><ul>
+        <li><a href="#uslugi">Услуги</a></li>
+        <li><a href="#situatsii">С чем приходят</a></li>
+        <li><a href="#put">Как это происходит</a></li>
+        <li><a href="#rezultaty">Результат</a></li>
+        <li><a href="#o-mne">Обо мне</a></li>
+        <li><a href="#blog">Блог</a></li>
+        <li><a href="#otzyvy">Отзывы</a></li>
+        <li><a href="#voprosy">Частые вопросы</a></li>
+    </ul></nav>
+  </aside>
 
   <main id="main">
 
@@ -131,6 +149,21 @@
       </div>
     </section>
 
+    <section class="section soft" id="put">
+      <div class="wrap">
+        <div class="section-head reveal" style="--d:0s">
+          <p class="kicker">Как это происходит</p>
+          <h2>Путь от первого сообщения <em>до решения вопроса</em></h2>
+        </div>
+        <ol class="steps reveal" style="--d:0s">
+          <li><span class="track"><span class="fill"></span></span><h3>Вы пишете мне</h3><p>Оставляете заявку на сайте или пишете в мессенджер, коротко и так, как получится. Вы сразу получаете номер заявки.</p></li>
+          <li><span class="track"><span class="fill"></span></span><h3>Разговор и консультация</h3><p>Я выслушаю, разберу документы и честно оценю шансы. Без спешки и без давления.</p></li>
+          <li><span class="track"><span class="fill"></span></span><h3>План и договор</h3><p>Предложу варианты действий, назову стоимость и сроки до начала работы. Решение всегда остаётся за вами.</p></li>
+          <li><h3>Работа по делу <span class="ready">Готово</span></h3><p>Веду дело и держу вас в курсе. Вам не нужно разбираться в процессуальных тонкостях: я объясню всё простыми словами.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="section" id="rezultaty">
       <div class="wrap">
         <div class="section-head reveal" style="--d:0s">
@@ -198,6 +231,7 @@
       </div>
     </section>
 
+    <div id="blog" class="blog-anchor" aria-hidden="true"></div>
     <section class="section" id="materialy"><div class="wrap">
       <div class="section-head reveal"><p class="kicker">Экспертные материалы / Мини-посты</p><h2>Понятно о том,<br><em>что делать дальше</em></h2><p class="section-lead">Короткие разборы ситуаций и первые шаги. Общая информация помогает сориентироваться, а конкретный план зависит от обстоятельств вашего дела.</p></div><div class="posts-grid"><article class="post-card reveal"><div class="post-cover" aria-hidden="true"><span>01</span><span>Репутация</span></div><p class="kicker">Репутация</p><h3>О вас написали неправду в сети</h3><p>Что сохранить до обращения за помощью.</p><details><summary>Читать мини-пост</summary><p>Сохраните ссылку на публикацию, дату, имя или адрес страницы автора. Сделайте скриншоты так, чтобы были видны текст и контекст публикации.</p><p>Не спешите удалять переписку и отвечать публичными обвинениями. Соберите материалы и обсудите с юристом, как надёжно зафиксировать доказательства и какие способы защиты подходят в вашей ситуации.</p></details></article>
         <article class="post-card reveal"><div class="post-cover" aria-hidden="true"><span>02</span><span>Защита ребёнка</span></div><p class="kicker">Защита ребёнка</p><h3>Ребёнок столкнулся с травлей</h3><p>Первые шаги, которые помогут разобраться.</p><details><summary>Читать мини-пост</summary><p>Сначала убедитесь, что ребёнок в безопасности, выслушайте его без обвинений. Сохраните сообщения и запишите даты эпизодов, участников и свидетелей.</p><p>Обратитесь к администрации школы письменно и сохраните копию обращения. При непосредственной угрозе жизни или здоровью обращайтесь в экстренные службы. Дальнейший порядок защиты зависит от обстоятельств.</p></details></article>
@@ -270,26 +304,11 @@
       </div>
     </section>
 
-    <section class="section soft" id="put">
-      <div class="wrap">
-        <div class="section-head reveal" style="--d:0s">
-          <p class="kicker">Как это происходит</p>
-          <h2>Путь от первого сообщения <em>до решения вопроса</em></h2>
-        </div>
-        <ol class="steps reveal" style="--d:0s">
-          <li><span class="track"><span class="fill"></span></span><h3>Вы пишете мне</h3><p>Оставляете заявку на сайте или пишете в мессенджер, коротко и так, как получится. Вы сразу получаете номер заявки.</p></li>
-          <li><span class="track"><span class="fill"></span></span><h3>Разговор и консультация</h3><p>Я выслушаю, разберу документы и честно оценю шансы. Без спешки и без давления.</p></li>
-          <li><span class="track"><span class="fill"></span></span><h3>План и договор</h3><p>Предложу варианты действий, назову стоимость и сроки до начала работы. Решение всегда остаётся за вами.</p></li>
-          <li><h3>Работа по делу <span class="ready">Готово</span></h3><p>Веду дело и держу вас в курсе. Вам не нужно разбираться в процессуальных тонкостях: я объясню всё простыми словами.</p></li>
-        </ol>
-      </div>
-    </section>
 
     <section class="section" id="voprosy">
       <div class="wrap">
         <div class="section-head reveal" style="--d:0s">
-          <p class="kicker">Частые вопросы</p>
-          <h2>Что обычно <em>спрашивают</em></h2>
+          <h2 class="kicker faq-title">Частые вопросы</h2>
         </div>
         <div class="faq">
         <details class="reveal" style="--d:0s">
@@ -323,20 +342,21 @@
     <section class="section soft" id="consult">
       <div class="wrap">
         <div class="cta-box reveal" style="--d:0s">
+          <p class="kicker consult-title">Заявка на юридическую помощь</p>
           <div>
-            <p class="kicker hide-sm">Заявка на юридическую помощь</p>
             <h2>У каждой ситуации <em>своя история</em></h2>
-            <p>Поэтому начинаем с разговора. Расскажите, что случилось, как получится. Я отвечу и подскажу, что можно сделать. Свяжусь с вами в течение <mark class="ph">[СРОК ОТВЕТА]</mark>.</p>
-            <p class="hide-sm">Каждой заявке присваивается номер, по которому я быстро найду ваше обращение. Или напишите сами: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a> · <a href="mailto:email@example.com"><mark class="ph">[EMAIL]</mark></a></p>
+            <p>Поэтому начинаем с разговора. Расскажите, что случилось, как получится. Я отвечу и подскажу, что можно сделать.</p>
           </div>
           <form class="lead-form" id="lead-form" method="post" action="/api/lead" novalidate>
-            <label class="wide-sm"><span>ФИО <span class="opt">(обязательно)</span></span><input type="text" name="fio" required autocomplete="name"></label>
-            <label class="wide-sm"><span>Телефон <span class="opt">(обязательно)</span></span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
-            <label class="half"><span>Email <span class="opt">(по желанию)</span></span><input type="email" name="email" autocomplete="email"></label>
-            <label class="half"><span>Telegram <span class="opt">(по желанию)</span></span><input type="text" name="telegram" autocomplete="off" placeholder="@ник"></label>
-            <label class="full"><span>Ваш вопрос <span class="opt">(обязательно)</span></span><textarea name="message" rows="2" required></textarea></label>
+            <label class="wide-sm"><span class="sr-only">ФИО (обязательно)</span><input type="text" name="fio" required autocomplete="name" placeholder="ФИО (обязательно)"></label>
+            <label class="wide-sm"><span class="sr-only">Телефон (обязательно)</span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="Телефон (обязательно)"></label>
+            <label class="half"><span class="sr-only">Email (по желанию)</span><input type="email" name="email" autocomplete="email" placeholder="Email"></label>
+            <label class="half"><span class="sr-only">Telegram (по желанию)</span><input type="text" name="telegram" autocomplete="off" placeholder="Telegram"></label>
+            <label class="full"><span class="sr-only">Ваш вопрос (обязательно)</span><textarea name="message" rows="2" required placeholder="Ваш вопрос (обязательно)"></textarea></label>
             <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent full"><input type="checkbox" name="consent" required><span>Даю <a href="https://example.com/consent">согласие на обработку персональных данных</a> и ознакомлен(а) с <a href="https://example.com/policy">политикой обработки</a>.</span></label>
+            <label class="consent full"><input type="checkbox" name="policy" required><span>Ознакомлен(а) с <a href="https://example.com/policy">политикой обработки персональных данных</a></span></label>
+            <label class="consent full"><input type="checkbox" name="consent" required><span>Согласен(на) на <a href="https://example.com/consent">обработку персональных данных</a></span></label>
+            <label class="consent full"><input type="checkbox" name="marketing"><span>Согласен(на) на получение рекламно-информационных материалов <span class="opt">(необязательно)</span></span></label>
             <button class="btn btn-block full" type="submit">Отправить заявку</button>
             <p class="form-status full" role="status" aria-live="polite"></p>
             <noscript><p class="full">Для отправки формы нужен JavaScript. Напишите или позвоните: <a href="tel:+7XXXXXXXXXX"><mark class="ph">[ТЕЛЕФОН]</mark></a></p></noscript>

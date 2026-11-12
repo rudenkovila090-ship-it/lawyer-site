@@ -57,6 +57,25 @@
     window.addEventListener('scroll', update, { passive: true });
   }
 
+  // Меню открывается мышью, кнопкой и с клавиатуры; закрытые ссылки не получают фокус.
+  var side = document.querySelector('.side-menu');
+  if (side) {
+    var toggle = side.querySelector('button');
+    var sideLinks = side.querySelector('nav');
+    function setSide(open) {
+      side.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      sideLinks.inert = !open;
+    }
+    toggle.addEventListener('click', function (event) { setSide(event.detail > 0 && matchMedia('(hover: hover)').matches ? true : toggle.getAttribute('aria-expanded') !== 'true'); });
+    side.addEventListener('mouseenter', function () { if (matchMedia('(hover: hover)').matches) setSide(true); });
+    side.addEventListener('mouseleave', function () { if (!side.contains(document.activeElement)) setSide(false); });
+    side.addEventListener('focusout', function (event) { if (!side.contains(event.relatedTarget)) setSide(false); });
+    side.addEventListener('keydown', function (event) { if (event.key === 'Escape') { toggle.focus(); setSide(false); } });
+    sideLinks.addEventListener('click', function (event) { if (event.target.closest('a')) { toggle.focus(); setSide(false); } });
+    document.addEventListener('click', function (event) { if (!side.contains(event.target)) setSide(false); });
+  }
+
   // Форма заявки: отправка в /api/lead (см. functions/api/lead.js), оттуда уведомление уходит в Telegram
   var form = document.getElementById('lead-form');
   if (!form) return;
@@ -105,6 +124,7 @@
     ev.preventDefault();
     var problems = check();
     if (problems.length) { say('Пожалуйста, ' + problems.join('; ') + '.'); return; }
+    if (!f.policy.checked) { say('Подтвердите ознакомление с политикой обработки персональных данных.'); return; }
     if (!f.consent.checked) { say('Нужно согласие на обработку персональных данных.'); return; }
     button.disabled = true;
     say('Отправляю…');
@@ -118,7 +138,9 @@
         telegram: f.telegram.value.trim(),
         message: f.message.value.trim(),
         website: f.website.value,
-        consent: true
+        policy: f.policy.checked,
+        consent: f.consent.checked,
+        marketing: f.marketing.checked
       })
     }).then(function (r) {
       return r.json().then(function (data) { if (!r.ok || !data.ok) { throw new Error('bad'); } return data; });

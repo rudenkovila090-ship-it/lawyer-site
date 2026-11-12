@@ -39,6 +39,7 @@ export async function onRequestPost({ request, env }) {
     (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) ||
     (tgRaw && !/^[A-Za-z0-9_]{3,32}$/.test(tgRaw)) ||
     message.length < 3 ||
+    data.policy !== true ||
     data.consent !== true;
   if (invalid) return json({ ok: false, error: 'invalid' }, 400);
 
@@ -51,7 +52,10 @@ export async function onRequestPost({ request, env }) {
     `Телефон: ${phone}`,
     `Email: ${email || 'не указан'}`,
     `Telegram: ${tgRaw ? '@' + tgRaw : 'не указан'}`,
-    `Вопрос: ${message}`
+    `Вопрос: ${message}`,
+    `Ознакомление с политикой: да`,
+    `Согласие на обработку персональных данных: да`,
+    `Рекламно-информационные материалы: ${data.marketing === true ? 'согласие получено' : 'согласия нет'}`
   ].join('\n');
 
   const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
