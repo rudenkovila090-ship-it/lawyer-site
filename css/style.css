@@ -464,3 +464,13 @@ button, input, textarea, select { font-family: var(--sans); }
   .cta-box { gap: 20px; }
   .cta-box .consult-title { font-size: .72rem; }
 }
+
+/* Шапка: имя, навигация и заявка занимают одну строку. */
+@media (min-width: 861px) {
+  .site-header .bar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; max-width: 1560px; }
+  .site-header .brand { grid-column: 1; grid-row: 1; font-size: 1.6rem; white-space: nowrap; }
+  .site-header .nav { grid-column: 2; grid-row: 1; width: 100%; min-width: 0; overflow-x: auto; scrollbar-width: thin; }
+  .site-header .nav ul { display: flex; flex-wrap: nowrap; justify-content: center; gap: 5px; width: max-content; min-width: 100%; }
+  .site-header .nav a { white-space: nowrap; padding: 10px 8px; font-size: clamp(.59rem, .74vw, .75rem); letter-spacing: .025em; }
+  .site-header .header-cta { grid-column: 3; grid-row: 1; white-space: nowrap; padding: 12px 15px; font-size: .65rem; }
+}
