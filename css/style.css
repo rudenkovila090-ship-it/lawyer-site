@@ -474,3 +474,6 @@ button, input, textarea, select { font-family: var(--sans); }
   .site-header .nav a { white-space: nowrap; padding: 10px 8px; font-size: clamp(.59rem, .74vw, .75rem); letter-spacing: .025em; }
   .site-header .header-cta { grid-column: 3; grid-row: 1; white-space: nowrap; padding: 12px 15px; font-size: .65rem; }
 }
+
+/* Общий масштаб: уменьшение всех элементов в 1,25 раза. */
+html { zoom: .8; }
